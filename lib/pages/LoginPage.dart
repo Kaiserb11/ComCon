@@ -109,12 +109,8 @@ class _LoginPageState extends State<LoginPage> {
                         color: Color(0xffEF716B),
                         elevation: 7.0,
                         child: GestureDetector(
-                          onTap: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
-                      },
+                          onTap: (){},
+                          
                           child: Center(
                             child: Text(
                               'LOGIN',

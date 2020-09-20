@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pbl_project/pages/doctor_list.dart';
+
 
 class SignupPage extends StatefulWidget {
   @override
@@ -92,12 +92,8 @@ class _SignupPageState extends State<SignupPage> {
                         color: Color(0xffEF716B),
                         elevation: 7.0,
                         child: GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DocList()),
-              );
-                          },
+                          onTap: () {},
+                          
                           child: Center(
                             child: Text(
                               'SIGNUP',
