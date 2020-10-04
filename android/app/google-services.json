@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "776347501114",
+    "firebase_url": "https://com-con-fb01d.firebaseio.com",
+    "project_id": "com-con-fb01d",
+    "storage_bucket": "com-con-fb01d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776347501114:android:0ec99ffc43f6147671ab03",
+        "android_client_info": {
+          "package_name": "com.example.ComCon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776347501114-9n45k7kiabl5dli91j4bpenrcl6kdbs9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNkXT1SdlKDvxXyLGR4up-__snKwD5mgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776347501114-9n45k7kiabl5dli91j4bpenrcl6kdbs9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
