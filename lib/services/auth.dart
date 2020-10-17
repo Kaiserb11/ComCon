@@ -38,7 +38,7 @@ class AuthService {
       UserCredential result = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       User user = result.user;
-      await DatabaseService(uid: user.uid).updateUserData('krishanu','sedan', 'fiesta', 'red', 'HR 1011', 9455322314, 2018006625, 'Btech CSE');
+      await DatabaseService(uid: user.uid).updateUserData('default_name','default_type', 'default_model', 'default_color', 'default_number', 000, 000, 'default_branch');
       return _userFromFirebaseUser(user);
     } catch (error) {
       return null;

@@ -1,6 +1,6 @@
 import 'package:ComCon/models/user.dart';
 import 'package:ComCon/pages/authentication/authenticate.dart';
-import 'package:ComCon/pages/Home/DashBoard.dart';
+import 'package:ComCon/pages/Home/BottomNavbar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +16,7 @@ class Wrapper extends StatelessWidget {
     if (user == null){
       return Authenticate();
     } else {
-      return Home();
+      return BottomNavPage();
     }
     
   }

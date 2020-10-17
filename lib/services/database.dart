@@ -6,10 +6,10 @@ class DatabaseService {
   DatabaseService({ this.uid });
 
   // collection reference
-  final CollectionReference brewCollection = FirebaseFirestore.instance.collection('Users');
+  final CollectionReference poolCollection = FirebaseFirestore.instance.collection('Users');
 
   Future<void> updateUserData(String name, String vehicalType, String vehicalModel, String vehicalColor, String vehicalPlate, int phoneNo, int sysId, String branch,) async {
-    return await brewCollection.doc(uid).set({
+    return await poolCollection.doc(uid).set({
       'name': name,
       'vehicalType': vehicalType,
       'vehicalModel': vehicalModel,
