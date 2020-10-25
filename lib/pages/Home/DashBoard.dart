@@ -75,7 +75,7 @@ class Home extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              buildDoctorList(),
+              buildPoolList(),
             ],
           ),
         ),
@@ -84,7 +84,7 @@ class Home extends StatelessWidget {
   }
 
 
-  buildDoctorList() {
+  buildPoolList() {
   return Padding(
     padding: EdgeInsets.symmetric(
       horizontal: 30,

@@ -1,5 +1,4 @@
 import 'package:ComCon/constant.dart';
-import 'package:ComCon/pages/Home/detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class PoolCard extends StatelessWidget {
