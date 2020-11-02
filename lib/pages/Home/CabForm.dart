@@ -1,19 +1,17 @@
-import 'package:ComCon/services/poolFormFill.dart';
+import 'package:ComCon/services/cabFormFill.dart';
 import 'package:flutter/material.dart';
 
-class FormScreen extends StatefulWidget {
+class CabFormScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return FormScreenState();
+    return CabFormScreenState();
   }
 }
 
-class FormScreenState extends State<FormScreen> {
+class CabFormScreenState extends State<CabFormScreen> {
   String name = '';
   String time = '';
   String phone = '';
-  String vehical = '';
-  String vehicalNum = '';
   String vehicalSeat = '';
   String location = '';
   String error = '';
@@ -25,7 +23,7 @@ class FormScreenState extends State<FormScreen> {
       decoration: InputDecoration(labelText: 'Name'),
       validator: (String value) {
         if (value.isEmpty) {
-          return 'Name is Required';
+          return 'This Field is Required';
         }
 
         return null;
@@ -41,7 +39,7 @@ class FormScreenState extends State<FormScreen> {
       decoration: InputDecoration(labelText: 'Time'),
       validator: (String value) {
         if (value.isEmpty) {
-          return 'Name is Required';
+          return 'This Field is Required';
         }
 
         return null;
@@ -57,7 +55,7 @@ class FormScreenState extends State<FormScreen> {
       decoration: InputDecoration(labelText: 'Phone Number'),
       validator: (String value) {
         if (value.isEmpty) {
-          return 'Name is Required';
+          return 'This Field is Required';
         }
 
         return null;
@@ -68,44 +66,12 @@ class FormScreenState extends State<FormScreen> {
     );
   }
 
-  Widget _buildVehical() {
-    return TextFormField(
-      decoration: InputDecoration(labelText: 'Vehical'),
-      validator: (String value) {
-        if (value.isEmpty) {
-          return 'Name is Required';
-        }
-
-        return null;
-      },
-      onChanged: (val) {
-        setState(() => vehical = val);
-      },
-    );
-  }
-
-  Widget _buildVehicalNum() {
-    return TextFormField(
-      decoration: InputDecoration(labelText: 'vehical Number'),
-      validator: (String value) {
-        if (value.isEmpty) {
-          return 'Name is Required';
-        }
-
-        return null;
-      },
-      onChanged: (val) {
-        setState(() => vehicalNum = val);
-      },
-    );
-  }
-
   Widget _buildVehicalSeat() {
     return TextFormField(
       decoration: InputDecoration(labelText: 'Vehical Capacity'),
       validator: (String value) {
         if (value.isEmpty) {
-          return 'Name is Required';
+          return 'This Field is Required';
         }
 
         return null;
@@ -121,7 +87,7 @@ class FormScreenState extends State<FormScreen> {
       decoration: InputDecoration(labelText: 'Drop Location'),
       validator: (String value) {
         if (value.isEmpty) {
-          return 'Name is Required';
+          return 'This Field is Required';
         }
 
         return null;
@@ -149,8 +115,6 @@ class FormScreenState extends State<FormScreen> {
                   _buildName(),
                   _buildTime(),
                   _buildPhone(),
-                  _buildVehical(),
-                  _buildVehicalNum(),
                   _buildVehicalSeat(),
                   _buildLocation(),
                   SizedBox(height: 10),
@@ -161,8 +125,7 @@ class FormScreenState extends State<FormScreen> {
                     ),
                     onPressed: () async {
                       if (_formKey.currentState.validate()) {
-                        await PoolService().fillForm(name, time, phone, vehical,
-                            vehicalNum, vehicalSeat, location);
+                        await CabService().fillForm(name, time, phone, vehicalSeat, location);
                         
                       }
                       //Send to API

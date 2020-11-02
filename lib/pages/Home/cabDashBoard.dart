@@ -4,9 +4,9 @@ import 'package:ComCon/constant.dart';
 import 'package:ComCon/pages/widgets/searchbar.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ComCon/pages/widgets/poolstream.dart';
+import 'package:ComCon/pages/widgets/cabstream.dart';
 
-class Home extends StatelessWidget {
+class HomeCab extends StatelessWidget {
   final AuthService _auth = AuthService();
 
   @override
@@ -40,7 +40,7 @@ class Home extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              "Find Your Desired\nPools :",
+              "Find Your Desired\nCab Pools :",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 32,
@@ -61,7 +61,7 @@ class Home extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              "Active Pools",
+              "Active Cab Pools",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: kTitleTextColor,
@@ -74,7 +74,7 @@ class Home extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              child: PoolStream(),
+              child: CabStream(),
             ),
           )
         ],

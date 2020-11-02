@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ComCon/constant.dart';
 
-class PoolStream extends StatefulWidget {
-  PoolStream();
+class CabStream extends StatefulWidget {
+  CabStream();
 
   @override
-  PoolStreamState createState() => PoolStreamState();
+  CabStreamState createState() => CabStreamState();
 }
 
-class PoolStreamState extends State<PoolStream> {
-  PoolStreamState();
+class CabStreamState extends State<CabStream> {
+  CabStreamState();
 
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: null,
       body: StreamBuilder(
-          stream: FirebaseFirestore.instance.collection('Pools').snapshots(),
+          stream: FirebaseFirestore.instance.collection('Cabs').snapshots(),
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (!snapshot.hasData) {

@@ -12,7 +12,7 @@ class PoolService {
     var phone = p;
     var vehical = v;
     var vehicalNum = vN;
-    var vehicalSeat = vN;
+    var vehicalSeat = vS;
     var location = l;
     await PoolDatabaseService(uid: user.uid).updatePoolData(
         name, time, phone, vehical, vehicalNum, vehicalSeat, location);
