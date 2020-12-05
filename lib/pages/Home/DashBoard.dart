@@ -5,6 +5,7 @@ import 'package:ComCon/pages/widgets/searchbar.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ComCon/pages/widgets/poolstream.dart';
+import 'package:ComCon/pages/Home/PoolForm.dart';
 
 class Home extends StatelessWidget {
   final AuthService _auth = AuthService();
@@ -12,6 +13,17 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: new FloatingActionButton(
+        child: Icon(Icons.add, color: kOrangeColor,),
+        backgroundColor: kBackgroundColor,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => FormScreen()),
+            );
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       backgroundColor: kBackgroundColor,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

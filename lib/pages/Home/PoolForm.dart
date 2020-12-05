@@ -163,6 +163,7 @@ class FormScreenState extends State<FormScreen> {
                       if (_formKey.currentState.validate()) {
                         await PoolService().fillForm(name, time, phone, vehical,
                             vehicalNum, vehicalSeat, location);
+                        Navigator.pop(context);
                         
                       }
                       //Send to API

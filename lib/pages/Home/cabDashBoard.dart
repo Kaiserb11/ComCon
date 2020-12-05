@@ -5,13 +5,24 @@ import 'package:ComCon/pages/widgets/searchbar.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ComCon/pages/widgets/cabstream.dart';
-
+import 'package:ComCon/pages/Home/CabForm.dart';
 class HomeCab extends StatelessWidget {
   final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: new FloatingActionButton(
+        child: Icon(Icons.add, color: kOrangeColor,),
+        backgroundColor: kBackgroundColor,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CabFormScreen()),
+            );
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       backgroundColor: kBackgroundColor,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

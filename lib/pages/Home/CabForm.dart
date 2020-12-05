@@ -126,7 +126,7 @@ class CabFormScreenState extends State<CabFormScreen> {
                     onPressed: () async {
                       if (_formKey.currentState.validate()) {
                         await CabService().fillForm(name, time, phone, vehicalSeat, location);
-                        
+                        Navigator.pop(context);
                       }
                       //Send to API
                     },

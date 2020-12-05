@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ComCon/pages/Home/DashBoard.dart';
 import 'package:ComCon/pages/Home/cabDashBoard.dart';
 import 'package:ComCon/constant.dart';
-import 'package:ComCon/pages/Home/PoolForm.dart';
-import 'package:ComCon/pages/Home/CabForm.dart';
+import 'package:ComCon/pages/Home/current.dart';
 
 
 
@@ -15,9 +14,9 @@ class BottomNavPage extends StatefulWidget {
 class _BottomNavPageState extends State<BottomNavPage> {
   final List _pages = [
     Home(),
-    FormScreen(),
     HomeCab(),
-    CabFormScreen(),
+    Current(),
+    Scaffold(),
   ];
   int _currentIndex = 0;
   

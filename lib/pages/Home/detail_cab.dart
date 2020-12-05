@@ -1,31 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:ComCon/constant.dart';
 
-class DetailPage extends StatefulWidget {
+class DetailPagecab extends StatefulWidget {
   String name;
   String time;
   String location;
   String phone;
-  String vehical;
-  String vehicalNum;
   String vehicalSeat;
 
-  DetailPage(this.name, this.time, this.location, this.phone, this.vehical, this.vehicalNum, this.vehicalSeat);
+  DetailPagecab(this.name, this.time, this.location, this.phone, this.vehicalSeat);
   @override
   State<StatefulWidget> createState() {
-    return DetailPageState(this.name, this.time, this.location, this.phone, this.vehical, this.vehicalNum, this.vehicalSeat);
+    return DetailPagecabState(this.name, this.time, this.location, this.phone, this.vehicalSeat);
   }
 }
 
-class DetailPageState extends State<DetailPage> {
+class DetailPagecabState extends State<DetailPagecab> {
   String name;
   String time;
   String location;
   String phone;
-  String vehical;
-  String vehicalNum;
   String vehicalSeat;
-  DetailPageState(this.name, this.time, this.location, this.phone, this.vehical, this.vehicalNum, this.vehicalSeat);
+  DetailPagecabState(this.name, this.time, this.location, this.phone, this.vehicalSeat);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +37,7 @@ class DetailPageState extends State<DetailPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              "Pool Details :",
+              "Cab Details :",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 32,
@@ -55,7 +51,7 @@ class DetailPageState extends State<DetailPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              "Pool locaiton : ",
+              "Cab locaiton : ",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: kTitleTextColor,
@@ -83,7 +79,7 @@ class DetailPageState extends State<DetailPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              "Pool Name: ",
+              "User's Name: ",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: kTitleTextColor,
@@ -111,7 +107,7 @@ class DetailPageState extends State<DetailPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              "Pool Time : ",
+              "Cab Time : ",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: kTitleTextColor,
@@ -139,7 +135,7 @@ class DetailPageState extends State<DetailPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              "Pool User Number : ",
+              "Cab User Number : ",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: kTitleTextColor,
@@ -164,62 +160,7 @@ class DetailPageState extends State<DetailPage> {
           SizedBox(
             height: 10,
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: Text(
-              "Pool User Vehical : ",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: kTitleTextColor,
-                fontSize: 20,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),           
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: Text(
-              vehical,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: kTitleTextColor,
-                fontSize: 20,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),     
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: Text(
-              "Pool User Vehical Number : ",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: kTitleTextColor,
-                fontSize: 20,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),   
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: Text(
-              vehicalNum,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: kTitleTextColor,
-                fontSize: 20,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
+
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Text(

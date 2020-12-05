@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ComCon/constant.dart';
+import 'package:ComCon/pages/Home/detail_screen.dart';
 
 class PoolStream extends StatefulWidget {
   PoolStream();
@@ -54,6 +55,13 @@ class PoolStreamState extends State<PoolStream> {
                               fontWeight: FontWeight.w600,
                             ),
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                new MaterialPageRoute(
+                                    builder: (context) =>
+                                        DetailPage(document['name'],document['time'],document['location'],document['phone'],document['vehical'],document['vehicalNum'],document['vehicalSeat'] )));
+                          },
                         ),
                       ),
                     ),
